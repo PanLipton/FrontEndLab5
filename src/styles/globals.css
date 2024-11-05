@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes textShadowAppear {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.hover\:text-shadow:hover {
+  animation: textShadowAppear 2s forwards;
+}
+
+/* Стилі для випадаючого меню */
+.dropdown-content {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Стилі для каруселі */
+.carousel-container {
+  height: 20vh;
+}
+
+/* Анімації для карток послуг */
+.service-card img {
+  transition: filter 0.3s ease;
+}
+
+.service-card:hover img {
+  filter: saturate(2);
+}
+
+/* Стилі для форми */
+.form-control:focus {
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+}
+
+/* Tooltip анімація */
+.tooltip {
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+}
+
+.tooltip.show {
+  opacity: 1;
+  transform: translateX(0);
+}
